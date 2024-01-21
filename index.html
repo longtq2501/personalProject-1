@@ -1,77 +1,60 @@
 <!DOCTYPE html>
-<html lang="en" class="">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Grocery Mart</title>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery Mart</title>
 
-        <!-- Favicon -->
-        <link
-            rel="apple-touch-icon"
-            sizes="76x76"
-            href="./assets/favicon/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./assets/favicon/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="./assets/favicon/favicon-16x16.png"
-        />
-        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <!-- Fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="./assets/css/main.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
 
-        <!-- Scripts -->
-        <script src="./assets/js/scripts.js"></script>
-    </head>
-    <body>
-        <!-- Header -->
-        <header id="header" class="header"></header>
-        <script>
-            load("#header", "./templates/header.html");
-        </script>
+    <!-- Scripts -->
+    <script src="./assets/js/scripts.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header" class="header"></header>
+    <script>
+      load("#header", "./templates/header.html");
+    </script>
 
-        <div class="container">
-            <!-- Slide show -->
-            <div class="slide-show">
-                <div class="slide-show__inner">
-                    <div class="slide-show__item">
-                        <img src="./assets/img/sildeshow/item-1.png" alt="" class="slide-show__img">
-                    </div>
+    <div class="container">
+      <!-- Slide show -->
+      <div class="slide-show">
+        <div class="slide-show__inner">
+          <div class="slide-show__item">
+            <a href="#!" class="slide-show__link">
+              <picture>
+                <source media="(max-width:767.98px)" srcset="./assets/img/sildeshow/item-1-md.png" />
+                <img src="./assets/img/sildeshow/item-1.png" alt="" class="slide-show__img" />
+              </picture>
+            </a>
+          </div>
 
-                    <div class="slide-show__item">
-                        <img src="./assets/img/sildeshow/item-1.png" alt="" class="slide-show__img">
-                    </div>
-
-                    <div class="slide-show__item">
-                        <img src="./assets/img/sildeshow/item-1.png" alt="" class="slide-show__img">
-                    </div>
-
-                    <div class="slide-show__page">
-                        <span class="slide-show__num">1</span>
-                        <span class="slide-show__slider"></span>
-                        <span class="slide-show__num">5</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer -->
-            <footer id="footer"></footer>
-            <script>
-                load("#footer", "./templates/footer.html");
-            </script>
+          <div class="slide-show__page">
+            <span class="slide-show__num">1</span>
+            <span class="slide-show__slider"></span>
+            <span class="slide-show__num">5</span>
+          </div>
         </div>
-    </body>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer"></footer>
+      <script>
+        load("#footer", "./templates/footer.html");
+      </script>
+    </div>
+  </body>
 </html>
