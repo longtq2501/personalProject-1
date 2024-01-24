@@ -1315,12 +1315,14 @@ html.dark {
     brightness(107%) contrast(96%);
   --sidebar-bg: #292e39;
   --sidebar-shadow: rgba(23, 28, 40, 0.4);
-  --home-heading: #FFF;
-  --home-item-bg: #171C28;
+  --home-heading: #fff;
+  --home-item-bg: #171c28;
   --home-item-heading: #fff;
-  --home-item-desc: #FFF;
-  --home-item-img-bg: #292E39;
-  --home-item-mobile-bg: #171C28;
+  --home-item-desc: #fff;
+  --home-item-img-bg: #292e39;
+  --home-item-mobile-bg: #171c28;
+  --home-item-bg-2: #171c28;
+  --home-item-heart-bg: #292e39;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1348,6 +1350,8 @@ html {
   --home-item-desc: #1a162e;
   --home-item-img-bg: #fff;
   --home-item-mobile-bg: #fff;
+  --home-item-bg-2: #fff;
+  --home-item-heart-bg: #fff;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1937,6 +1941,64 @@ html {
   .cate-item__text--desc {
     text-align: unset;
   }
+}
+
+.cate-bigItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.6rem;
+  border-radius: 2rem;
+  background: var(--home-item-bg-2);
+}
+.cate-bigItem__thumb {
+  width: 28rem;
+  height: 28.4rem;
+  object-fit: contain;
+  margin-bottom: 1.6rem;
+}
+.cate-bigItem__heading {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+.cate-bigItem__brand {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #9e9da8;
+  line-height: 146.667%;
+}
+.cate-bigItem__text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.6rem;
+}
+.cate-bigItem__money, .cate-bigItem__star {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+.cate-bigItem__star {
+  display: flex;
+  column-gap: 6px;
+}
+.cate-bigItem__star::before {
+  content: url(/assets/img/browser-product/Star.svg);
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.cate-bigItem__access {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cate-bigItem__like-box {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  filter: drop-shadow(0px 20px 60px rgba(124, 124, 124, 0.2));
+  background: var(--home-item-heart-bg);
 }
 
 .home__container {
