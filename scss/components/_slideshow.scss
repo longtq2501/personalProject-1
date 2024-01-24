@@ -3,11 +3,6 @@
 .slide-show {
   --color: #fff;
   position: relative;
-  margin: 4rem 0rem;
-
-  @include abstracts.screen(md) {
-    margin: 3rem 0rem;
-  }
 
   &__inner {
     display: flex;
