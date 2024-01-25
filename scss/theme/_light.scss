@@ -36,4 +36,10 @@ html {
   //browser product
   --home-item-bg-2: #fff;
   --home-item-heart-bg: #fff;
+  --home-filter-bg: #fff;
+  --home-filter-text: #6c6c72;
+  --home-item-heart: brightness(0) saturate(100%) invert(7%) sepia(32%) saturate(2030%) hue-rotate(220deg)
+    brightness(94%) contrast(94%);
+  --home-filter-control: brightness(0) saturate(100%) invert(7%) sepia(32%) saturate(2030%) hue-rotate(220deg)
+    brightness(94%) contrast(94%);
 }

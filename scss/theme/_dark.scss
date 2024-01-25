@@ -39,4 +39,10 @@ html.dark {
   //browser product
   --home-item-bg-2: #171c28;
   --home-item-heart-bg: #292e39;
+  --home-filter-bg: #171c28;
+  --home-filter-text: #fff;
+  --home-item-heart: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(3779%) hue-rotate(352deg)
+    brightness(112%) contrast(100%);
+  --home-filter-control: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(3779%) hue-rotate(352deg)
+    brightness(112%) contrast(100%);
 }

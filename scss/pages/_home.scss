@@ -12,7 +12,10 @@
     font-size: 2.4rem;
     font-weight: 700;
     line-height: 141.667%;
-    margin-bottom: 2rem;
+
+    &-mb {
+      margin-bottom: 2rem;
+    }
   }
 
   &--cate {
@@ -20,6 +23,45 @@
 
     @include abstracts.screen(md) {
       row-gap: 2rem;
+    }
+  }
+
+  &--title-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--filter {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--home-filter-bg);
+    border-radius: 0.6rem;
+
+    &::before {
+      content: "Filter";
+      color: var(--home-filter-text);
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 150%;
+    }
+  }
+
+  &--control {
+    width: 2.4rem;
+    height: 2.4rem;
+    filter: var(--home-filter-control);
+  }
+
+  &--title-box {
+    margin-bottom: 2rem;
+  }
+
+  &--product {
+    @include abstracts.screen(lg) {
+      --grid-gutter-y: 3rem;
     }
   }
 }
