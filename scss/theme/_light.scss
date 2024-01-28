@@ -42,4 +42,10 @@ html {
     brightness(94%) contrast(94%);
   --home-filter-control: brightness(0) saturate(100%) invert(7%) sepia(32%) saturate(2030%) hue-rotate(220deg)
     brightness(94%) contrast(94%);
+
+  //filter form
+  --filter-form-bg: #fff;
+  --filter-form-shadow: rgba(200, 200, 200, 0.4);
+  --filter-input-value: #1a162e;
+  --filter-form-tag-color: #f8f8fb;
 }

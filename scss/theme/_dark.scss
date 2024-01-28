@@ -45,4 +45,10 @@ html.dark {
     brightness(112%) contrast(100%);
   --home-filter-control: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(3779%) hue-rotate(352deg)
     brightness(112%) contrast(100%);
+
+  //filter form
+  --filter-form-bg: #292e39;
+  --filter-form-shadow: rgba(0, 0, 0, 0.4);
+  --filter-input-value: #fff;
+  --filter-form-tag-color: #171c28;
 }
