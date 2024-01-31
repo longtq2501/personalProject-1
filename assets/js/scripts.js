@@ -179,3 +179,17 @@ window.addEventListener("template-loaded", () => {
     };
   });
 });
+
+//bấm vào filter mở ra form filter
+
+window.onload = function () {
+  const filterButton = document.querySelector(".home__container--filter");
+  const filterForm = document.querySelector(".filter");
+  filterButton.addEventListener("click", () => {
+    filterForm.style.display = "block";
+  });
+
+  filterButton.addEventListener("blur", () => {
+    filterForm.style.display = "none";
+  });
+};
