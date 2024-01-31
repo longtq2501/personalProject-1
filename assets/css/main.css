@@ -2064,7 +2064,6 @@ html {
 }
 
 .filter {
-  display: none;
   position: absolute;
   right: 0;
   top: 50px;
@@ -2073,6 +2072,20 @@ html {
   background: var(--filter-form-bg);
   filter: drop-shadow(0px 40px 90px var(--filter-form-shadow));
 }
+.filter::before {
+  content: url(../icons/dropdown-arrow.svg);
+  position: absolute;
+  top: -12px;
+  right: 47px;
+  filter: var(--filter-input-bg);
+}
+@media (max-width: 1199.98px) {
+  .filter__col {
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+  }
+}
 .filter__heading {
   font-size: 2.2rem;
   font-weight: 500;
@@ -2080,6 +2093,11 @@ html {
 }
 .filter__form {
   margin-top: 3rem;
+}
+@media (max-width: 1199.98px) {
+  .filter__form {
+    margin-top: 1.5rem;
+  }
 }
 .filter__form-label {
   display: block;
@@ -2215,6 +2233,11 @@ html {
 }
 .filter__row {
   display: flex;
+}
+@media (max-width: 1199.98px) {
+  .filter__row {
+    flex-wrap: wrap;
+  }
 }
 .filter__separate {
   width: 0.1rem;

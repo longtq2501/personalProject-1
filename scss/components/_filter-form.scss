@@ -6,7 +6,6 @@
 }
 
 .filter {
-  display: none;
   position: absolute;
   right: 0;
   top: 50px;
@@ -17,6 +16,22 @@
   background: var(--filter-form-bg);
   filter: drop-shadow(0px 40px 90px var(--filter-form-shadow));
 
+  &::before {
+    content: url(../icons/dropdown-arrow.svg);
+    position: absolute;
+    top: -12px;
+    right: 47px;
+    filter: var(--filter-input-bg);
+  }
+
+  &__col {
+    @include abstracts.screen(xl) {
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #eee;
+    }
+  }
+
   &__heading {
     font-size: 2.2rem;
     font-weight: 500;
@@ -25,6 +40,10 @@
 
   &__form {
     margin-top: 3rem;
+
+    @include abstracts.screen(xl) {
+      margin-top: 1.5rem;
+    }
 
     &-label {
       display: block;
@@ -196,6 +215,10 @@
 
   &__row {
     display: flex;
+
+    @include abstracts.screen(xl) {
+      flex-wrap: wrap;
+    }
   }
 
   &__separate {
