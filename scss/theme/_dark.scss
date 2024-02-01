@@ -55,4 +55,11 @@ html.dark {
     brightness(106%) contrast(106%);
   --filter-input-bg: brightness(0) saturate(100%) invert(11%) sepia(8%) saturate(2039%) hue-rotate(183deg)
     brightness(98%) contrast(83%);
+
+  //footer
+  --footer-bg: #000;
+  --footer-text-color: #fff;
+  --footer-separate: #ccc;
+  --footer-label: #fff;
+  --footer-border: #fff;
 }

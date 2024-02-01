@@ -1,0 +1,155 @@
+@use "../abstracts";
+
+.footer {
+  margin-top: 6rem;
+  padding: 7rem 0rem;
+  background: var(--footer-bg);
+
+  &__text {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "aa aa aa aa";
+    column-gap: 2rem;
+
+    @include abstracts.screen(lg) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "aa aa"
+        "aa aa";
+      row-gap: 7rem;
+      text-align: center;
+    }
+
+    @include abstracts.screen(md) {
+      row-gap: 5rem;
+    }
+  }
+
+  &__list {
+    &-item {
+      color: var(--footer-text-color);
+      margin-bottom: 2rem;
+
+      &:hover {
+        color: #1b42ad;
+      }
+
+      &-1 {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  &__separate {
+    background: var(--footer-separate);
+    height: 2px;
+    border-radius: 999px;
+    margin-top: 6rem;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    margin-top: 6rem;
+
+    @include abstracts.screen(xxl) {
+      flex-wrap: wrap;
+    }
+
+    @include abstracts.screen(lg) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__form-1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__form-2 {
+    margin-left: auto;
+
+    @include abstracts.screen(lg) {
+      margin-left: 0;
+      margin-top: 3rem;
+    }
+  }
+
+  &__label {
+    font-weight: 500;
+    line-height: 100%;
+    color: var(--footer-label);
+    white-space: no-wrap;
+
+    @include abstracts.screen(sm) {
+      display: none;
+    }
+  }
+
+  &__input {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ccc;
+
+    margin-left: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--footer-border);
+
+    &-select {
+      color: var(--footer-label);
+      background: var(--footer-bg);
+    }
+  }
+
+  &__search {
+    position: absolute;
+    right: 17px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    gap: 1.7rem;
+    margin-left: auto;
+
+    @include abstracts.screen(xxl) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 5rem;
+    }
+
+    &--img {
+      scale: 2;
+      cursor: pointer;
+      padding: 1rem;
+
+      @include abstracts.screen(sm) {
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+
+    margin-top: 6rem;
+
+    &--text {
+      font-size: 1.6rem;
+      font-weight: 500;
+      opacity: 0.6;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+  }
+}
