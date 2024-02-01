@@ -2174,6 +2174,7 @@ html {
   display: flex;
   gap: 1rem;
   align-items: center;
+  justify-content: space-between;
 }
 .cate-bigItem__access {
   display: flex;
