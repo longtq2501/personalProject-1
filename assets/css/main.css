@@ -2170,11 +2170,9 @@ html {
   display: flex;
   column-gap: 6px;
 }
-.cate-bigItem__star::before {
-  content: url(/assets/img/browser-product/Star.svg);
-  display: block;
-  width: 2.4rem;
-  height: 2.4rem;
+.cate-bigItem__star-box {
+  display: flex;
+  gap: 1rem;
 }
 .cate-bigItem__access {
   display: flex;

@@ -45,11 +45,9 @@
     display: flex;
     column-gap: 6px;
 
-    &::before {
-      content: url(/assets/img/browser-product/Star.svg);
-      display: block;
-      width: 2.4rem;
-      height: 2.4rem;
+    &-box {
+      display: flex;
+      gap: 1rem;
     }
   }
 
