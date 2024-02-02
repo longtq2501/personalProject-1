@@ -30,6 +30,10 @@
       color: var(--footer-text-color);
       margin-bottom: 2rem;
 
+      @include abstracts.screen(md) {
+        line-height: 1.4;
+      }
+
       &:hover {
         color: #1b42ad;
       }

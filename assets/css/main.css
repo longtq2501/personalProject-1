@@ -1666,6 +1666,11 @@ html {
   color: var(--footer-text-color);
   margin-bottom: 2rem;
 }
+@media (max-width: 767.98px) {
+  .footer__list-item {
+    line-height: 1.4;
+  }
+}
 .footer__list-item:hover {
   color: #1b42ad;
 }
