@@ -1352,6 +1352,11 @@ html.dark {
   --footer-separate: #ccc;
   --footer-label: #fff;
   --footer-border: #fff;
+  --signup-intro-bg: #1a162e;
+  --signup-placeholder: #b9babe;
+  --signup-check: #b9babe;
+  --signup-icon: brightness(0) saturate(100%) invert(89%) sepia(8%) saturate(92%) hue-rotate(190deg) brightness(81%)
+    contrast(98%);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1400,6 +1405,11 @@ html {
   --footer-separate: #000;
   --footer-label: #000;
   --footer-border: #000;
+  --signup-intro-bg: #ededf6;
+  --signup-placeholder: #d2d1d6;
+  --signup-check: #9e9da8;
+  --signup-icon: brightness(0) saturate(100%) invert(4%) sepia(42%) saturate(4485%) hue-rotate(242deg) brightness(84%)
+    contrast(90%);
 }
 @media (max-width: 991.98px) {
   html {
@@ -2402,6 +2412,44 @@ html {
   margin: 0rem 3rem;
 }
 
+.btn {
+  display: flex;
+  align-items: center;
+  height: 46px;
+  padding: 0 20px;
+  border-radius: 6px;
+  background: #f8f8fb;
+  font-size: 1.8rem;
+  font-weight: 500;
+  user-select: none;
+}
+.btn + .btn {
+  margin-left: 20px;
+}
+.btn--text {
+  color: #9e9da8;
+  background: transparent;
+  font-weight: 400;
+}
+.btn--primary {
+  color: #171c28;
+  background: #ffb700;
+}
+.btn--outline {
+  background: transparent;
+  border: 1px solid #d2d1d6;
+}
+.btn--rounded {
+  border-radius: 99px;
+}
+.btn[disabled], .btn--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.btn:hover {
+  opacity: 0.9;
+}
+
 .home__container {
   margin-top: 4rem;
 }
@@ -2458,6 +2506,147 @@ html {
 @media (max-width: 991.98px) {
   .home__container--product {
     --grid-gutter-y: 3rem;
+  }
+}
+
+.auth {
+  display: flex;
+  height: 100vh;
+}
+.auth__intro {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--signup-intro-bg);
+}
+.auth__intro--img {
+  max-width: 422px;
+}
+.auth__intro--text {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  width: min(412px, 100%);
+  margin-top: 5rem;
+}
+.auth__content {
+  padding: 5rem 0rem;
+  flex: 1;
+}
+.auth__content--inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 575.98px) {
+  .auth__content--inner {
+    width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.auth__heading {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 44px;
+  margin-top: 5rem;
+}
+.auth__desc {
+  color: #9e9da8;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-top: 1rem;
+}
+.auth__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(460px, 100%);
+  margin-top: 5rem;
+}
+@media (max-width: 575.98px) {
+  .auth__form {
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+  }
+}
+.auth__form--box {
+  position: relative;
+  width: max(460px, 100%);
+  margin-bottom: 2rem;
+}
+@media (max-width: 575.98px) {
+  .auth__form--box {
+    width: 100%;
+  }
+}
+.auth__form--input {
+  width: 100%;
+  color: var(--signup-placeholder);
+  background: transparent;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  padding: 1.2rem;
+  border: 1px solid #d2d1d6;
+  border-radius: 10px;
+}
+.auth__form--img {
+  position: absolute;
+  right: 13px;
+  bottom: 15px;
+}
+.auth__box-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(460px, 100%);
+  margin-bottom: 5rem;
+}
+.auth__label, .auth__recheck, .auth__no-account--desc, .auth__no-account--link {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+}
+.auth__no-account--desc, .auth__label {
+  color: var(--signup-check);
+}
+.auth__recheck, .auth__no-account--link {
+  color: #0071dc;
+}
+.auth__recheck:hover, .auth__no-account--link:hover {
+  opacity: 0.9;
+}
+.auth__button {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.auth__button-icon {
+  filter: var(--signup-icon);
+}
+.auth__button + .auth__button {
+  margin-top: 3rem;
+  margin-left: 0 !important;
+  column-gap: 1rem;
+}
+.auth__no-account {
+  margin-top: 9rem;
+}
+@media (max-width: 575.98px) {
+  .auth__no-account {
+    margin-top: 6rem;
   }
 }
 

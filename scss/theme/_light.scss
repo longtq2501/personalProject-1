@@ -59,4 +59,11 @@ html {
   --footer-separate: #000;
   --footer-label: #000;
   --footer-border: #000;
+
+  //Sign up
+  --signup-intro-bg: #ededf6;
+  --signup-placeholder: #d2d1d6;
+  --signup-check: #9e9da8;
+  --signup-icon: brightness(0) saturate(100%) invert(4%) sepia(42%) saturate(4485%) hue-rotate(242deg) brightness(84%)
+    contrast(90%);
 }

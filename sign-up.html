@@ -1,55 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sign up | Grocery Mart</title>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up | Grocery Mart</title>
 
-        <!-- Favicon -->
-        <link
-            rel="apple-touch-icon"
-            sizes="76x76"
-            href="./assets/favicon/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="./assets/favicon/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="./assets/favicon/favicon-16x16.png"
-        />
-        <link rel="manifest" href="./assets/favicon/site.webmanifest" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
+    <!-- Fonts -->
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css" />
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="./assets/css/main.css" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
 
-        <!-- Scripts -->
-        <script src="./assets/js/scripts.js"></script>
-    </head>
-    <body>
-        <!-- Header -->
-        <header id="header"></header>
-        <script>
-            load("#header", "./templates/header.html");
-        </script>
+    <!-- Scripts -->
+    <script src="./assets/js/scripts.js"></script>
+  </head>
+  <body>
+    <main class="auth">
+      <!-- Auth Intro -->
+      <div class="auth__intro d-lg-none">
+        <picture>
+          <source media="(max-width:767.98px)" srcset="./assets/img/signup/signup-1-mobile.png" />
+          <img src="./assets/img/signup/signup-1.png" alt="" class="auth__intro--img" />
+        </picture>
+        <p class="auth__intro--text">The best of luxury brand values, high quality products, and innovative services</p>
+      </div>
 
-        <!-- Main -->
-        <h1>Sign up page</h1>
+      <!-- Auth Content -->
+      <div class="auth__content">
+        <div class="auth__content--inner">
+          <!-- Logo -->
+          <a href="./" class="logo">
+            <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
+            <h1 class="logo__title">grocerymart</h1>
+          </a>
 
-        <!-- Footer -->
-        <footer id="footer"></footer>
-        <script>
-            load("#footer", "./templates/footer.html");
-        </script>
-    </body>
+          <h1 class="auth__heading">Sign Up</h1>
+          <p class="auth__desc">Let’s create your account and Shop like a pro and save money.</p>
+
+          <!-- Form input -->
+          <form class="auth__form">
+            <div class="auth__form--box">
+              <input type="email" name="" id="" class="auth__form--input" placeholder="Email" />
+              <img src="./assets/icons/form-input-icon-checked.svg" alt="" class="auth__form--img" />
+            </div>
+            <div class="auth__form--box">
+              <input type="password" name="" id="" class="auth__form--input" placeholder="Password" />
+              <img src="./assets/icons/form-input-icon-locked.svg" alt="" class="auth__form--img" />
+            </div>
+            <div class="auth__form--box">
+              <input type="password" name="" id="" class="auth__form--input" placeholder="Confirm Password" />
+              <img src="./assets/icons/form-input-icon-locked.svg" alt="" class="auth__form--img" />
+            </div>
+          </form>
+
+          <!-- Form confirm -->
+          <div class="auth__box-text">
+            <div class="auth__box-text--check">
+              <input type="checkbox" name="check" id="" class="auth__check" />
+              <label for="check" class="auth__label">Set as default card</label>
+            </div>
+            <a href="#!" class="auth__recheck">Recovery Password</a>
+          </div>
+
+          <!-- Form buttons -->
+          <button class="btn btn--primary auth__button">Sign Up</button>
+          <button class="btn btn--outline auth__button">
+            <img src="./assets/icons/google-icon.svg" class="auth__button-icon" />
+            Sign in with Gmail
+          </button>
+
+          <!-- Ask for no account -->
+          <div class="auth__no-account">
+            <span class="auth__no-account--desc">You have an account yet?</span>
+            <a href="" class="auth__no-account--link">Sign in</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

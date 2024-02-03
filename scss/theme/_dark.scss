@@ -62,4 +62,11 @@ html.dark {
   --footer-separate: #ccc;
   --footer-label: #fff;
   --footer-border: #fff;
+
+  //Sign up
+  --signup-intro-bg: #1a162e;
+  --signup-placeholder: #b9babe;
+  --signup-check: #b9babe;
+  --signup-icon: brightness(0) saturate(100%) invert(89%) sepia(8%) saturate(92%) hue-rotate(190deg) brightness(81%)
+    contrast(98%);
 }
