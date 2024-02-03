@@ -2641,7 +2641,7 @@ html {
   column-gap: 1rem;
 }
 .auth__no-account {
-  margin-top: 9rem;
+  margin-top: 14rem;
 }
 @media (max-width: 575.98px) {
   .auth__no-account {
