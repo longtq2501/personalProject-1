@@ -31,6 +31,11 @@
     padding: 5rem 0rem;
     flex: 1;
 
+    // @include abstracts.screen(md) {
+    //   display: flex;
+    //   align-items: center;
+    // }
+
     &--inner {
       display: flex;
       flex-direction: column;
@@ -104,6 +109,11 @@
       padding: 1.2rem;
       border: 1px solid #d2d1d6;
       border-radius: 10px;
+
+      &-error {
+        border: 1px solid red;
+        background: rgba($color: red, $alpha: 0.1);
+      }
     }
 
     &--img {
@@ -162,10 +172,18 @@
   }
 
   &__no-account {
-    margin-top: 14rem;
+    margin-top: 10rem;
 
-    @include abstracts.screen(sm) {
+    @include abstracts.screen(md) {
       margin-top: 6rem;
     }
+  }
+
+  &__message {
+    margin-top: 3rem;
+  }
+
+  &__logo {
+    margin-left: 0;
   }
 }

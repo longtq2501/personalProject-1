@@ -1,0 +1,18 @@
+.message {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  border-radius: 5px 5px 0 0;
+  font-weight: 500;
+  width: 100%;
+
+  &--success {
+    background: rgb(18 117 62 / 20%);
+    border-bottom: 4px solid #319367;
+  }
+
+  &__check {
+    width: 2rem;
+  }
+}

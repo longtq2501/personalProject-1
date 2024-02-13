@@ -69,4 +69,11 @@ html.dark {
   --signup-check: #b9babe;
   --signup-icon: brightness(0) saturate(100%) invert(89%) sepia(8%) saturate(92%) hue-rotate(190deg) brightness(81%)
     contrast(98%);
+
+    //Breadcrumbs
+  --breadcrumbs-color: #FFFFFF;
+
+  //Product detail
+  --product-info-bg: #171C28;
+  --product-info-option-bg: #292E39;
 }

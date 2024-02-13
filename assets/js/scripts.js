@@ -193,3 +193,14 @@ window.onload = function () {
     filterForm.style.display = "none";
   });
 };
+
+// window.onload = function () {
+//   const formEmailBox = document.querySelector(".auth__form--input");
+//   const formEmailValue = document.getElementById("form-email").value;
+
+//   if (formEmailValue <= 6) {
+//     formEmailBox.onblur = () => {
+//       formEmailBox.classList.add("auth__form--input-error");
+//     };
+//   }
+// };
