@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,7 +31,7 @@
     <!-- Scripts -->
     <script src="./assets/js/scripts.js"></script>
   </head>
-  <body>
+  <body style="height: 10000px">
     <!-- Header -->
     <header id="header" class="header"></header>
     <script>
@@ -62,9 +62,13 @@
           </ul>
         </div>
 
+        <!-- Product Information -->
         <div class="product-container">
           <article class="product-info">
-            <img src="./assets/img/browser-product/item-1.png" class="product-info__img" />
+            <picture>
+              <source media="(max-width:767.98px)" srcset="./assets/img/product-details/item-1.png">
+              <img src="./assets/img/browser-product/item-1.png" class="product-info__img" />
+            </picture>
             <article class="product-info__text">
               <h1 class="product-info__title">Coffee Beans - Espresso Arabica and Robusta Beans</h1>
               <div class="product-info__col-box">
@@ -133,7 +137,7 @@
                     <span class="product-info__money">$540.00</span>
                     <div class="product-info__btn-box">
                       <button class="btn--primary product-info__btn">Add to cart</button>
-                      <button class="btn--outline product-info__heart-btn">
+                      <button class="btn--outline product-info__heart-btn d-xl-none">
                         <img src="./assets/icons/heart.svg" alt="" class="cate-bigItem__like" />
                       </button>
                     </div>
@@ -143,13 +147,77 @@
             </article>
           </article>
         </div>
+
+        <!-- Product feedback options -->
+        <div class="product-container">
+          <ul class="product-feedback">
+            <li class="product-feedback__items">Description</li>
+            <li class="product-feedback__items">Features</li>
+            <li class="product-feedback__items product-feedback__items--chosen">Review (1100)</li>
+            <li class="product-feedback__items">Similar</li>
+          </ul>
+        </div>
+
+        <!-- Product feedback person -->
+        <div class="product-container">
+          <p class="product-feedback__title">What our customers are saying</p>
+          <div class="row row-cols-3 row-cols-md-1">
+            <!-- col 1 -->
+            <div class="col">
+              <div class="product-feedback__card">
+                <div class="product-feedback__personal">
+                  <img src="./assets/img/product-details/avt-1.jpg" class="product-feedback__img" />
+                  <div class="product-feedback__box-name">
+                    <span class="product-feedback__name">Jakir Hussen</span>
+                    <p class="product-feedback__desc">Great product, I love this Coffee Beans</p>
+                  </div>
+                </div>
+
+                <div class="product-feedback__review">
+                  <img src="./assets/icons/five-stars.svg" class="product-feedback__stars" />
+                  <span class="product-feedback__rating">(3.5) Review</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- col 2 -->
+            <div class="col">
+              <div class="product-feedback__card">
+                <div class="product-feedback__personal">
+                  <img src="./assets/img/product-details/avt-1.jpg" class="product-feedback__img" />
+                  <div class="product-feedback__box-name">
+                    <span class="product-feedback__name">Jakir Hussen</span>
+                    <p class="product-feedback__desc">Great product, I love this Coffee Beans</p>
+                  </div>
+                </div>
+
+                <div class="product-feedback__review">
+                  <img src="./assets/icons/five-stars.svg" class="product-feedback__stars" />
+                  <span class="product-feedback__rating">(3.5) Review</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- col 3 -->
+            <div class="col">
+              <div class="product-feedback__card">
+                <div class="product-feedback__personal">
+                  <img src="./assets/img/product-details/avt-1.jpg" class="product-feedback__img" />
+                  <div class="product-feedback__box-name">
+                    <span class="product-feedback__name">Jakir Hussen</span>
+                    <p class="product-feedback__desc">Great product, I love this Coffee Beans</p>
+                  </div>
+                </div>
+
+                <div class="product-feedback__review">
+                  <img src="./assets/icons/five-stars.svg" class="product-feedback__stars" />
+                  <span class="product-feedback__rating">(3.5) Review</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
-
-    <!-- Footer -->
-    <footer id="footer"></footer>
-    <script>
-      load("#footer", "./templates/footer.html");
-    </script>
   </body>
 </html>

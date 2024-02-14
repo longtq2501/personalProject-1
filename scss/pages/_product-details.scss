@@ -18,6 +18,11 @@ body {
       background: var(--product-info-bg);
 
       padding: 6rem;
+
+      @include abstracts.screen(xl) {
+        padding: 3rem;
+        width: min(500px, 50%);
+      }
     }
 
     &__title {
@@ -31,6 +36,14 @@ body {
     &__col-box {
       display: flex;
       gap: 6rem;
+
+      @include abstracts.screen(xl) {
+        gap: 2rem;
+      }
+
+      @include abstracts.screen(lg) {
+        flex-wrap: wrap;
+      }
     }
 
     &__desc {
@@ -76,6 +89,10 @@ body {
       padding: 2rem;
       border-radius: 6px;
       border: 1px solid #b9babe;
+
+      @include abstracts.screen(xl) {
+        width: 244px;
+      }
     }
 
     &__submoney {
@@ -111,6 +128,7 @@ body {
       line-height: 26px;
       border-radius: 6px;
       padding: 10px 55px;
+      flex: 1;
     }
 
     &__btn-box {
@@ -133,6 +151,94 @@ body {
 
     &__icon {
       filter: var(--home-item-heart);
+    }
+
+    &__img {
+      @include abstracts.screen(xl) {
+        width: 33rem;
+      }
+    }
+  }
+
+  &-feedback {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+
+    &__items {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 32px;
+      color: #9e9da8;
+
+      &--chosen {
+        color: var(--product-feedback-color);
+      }
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 34px;
+      color: var(--product-feedback-color);
+      margin-bottom: 3rem;
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+
+      padding: 3rem;
+      border-radius: 16px;
+      background: var(--product--feedback-card-bg);
+    }
+
+    &__personal {
+      display: flex;
+      gap: 2rem;
+
+      @include abstracts.screen(xl) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    &__img {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    &__name {
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 32px;
+    }
+
+    &__desc {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &__review {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    &__rating {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    &__box-name {
+      @include abstracts.screen(xl) {
+        text-align: center;
+      }
     }
   }
 }
