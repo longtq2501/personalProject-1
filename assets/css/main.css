@@ -1362,6 +1362,9 @@ html.dark {
   --product-info-option-bg: #292e39;
   --product-feedback-color: #ffffff;
   --product--feedback-card-bg: #171c28;
+  --product--bg: #292e39;
+  --product-search-icon: brightness(0) saturate(100%) invert(84%) sepia(7%) saturate(115%) hue-rotate(191deg)
+    brightness(90%) contrast(86%);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1422,6 +1425,9 @@ html {
   --product-info-option-bg: #ededf6;
   --product-feedback-color: #1a162e;
   --product--feedback-card-bg: #fafafd;
+  --product--bg: #ededf6;
+  --product-search-icon: brightness(0) saturate(100%) invert(7%) sepia(9%) saturate(6867%) hue-rotate(220deg)
+    brightness(100%) contrast(94%);
 }
 @media (max-width: 991.98px) {
   html {
@@ -2478,6 +2484,28 @@ html {
   width: 2rem;
 }
 
+.search {
+  position: relative;
+  width: 100%;
+}
+.search__input {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 142.857%;
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+  background: var(--header-bg-color);
+}
+.search__icon--search {
+  cursor: pointer;
+  position: absolute;
+  right: 18px;
+  bottom: 50%;
+  transform: translateY(50%);
+  filter: var(--product-search-icon);
+}
+
 .home__container {
   margin-top: 4rem;
 }
@@ -2690,6 +2718,11 @@ html {
 body {
   background: var(--top-act-group-bg-color);
 }
+@media (max-width: 991.98px) {
+  body {
+    background: var(--product--bg);
+  }
+}
 
 .product-container {
   margin-top: 3rem;
@@ -2709,12 +2742,26 @@ body {
     width: min(500px, 50%);
   }
 }
+@media (max-width: 767.98px) {
+  .product-info__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .product-info__title {
   font-weight: 500;
   font-size: 24px;
   line-height: 36px;
   max-width: 639px;
   margin-bottom: 3rem;
+}
+@media (max-width: 767.98px) {
+  .product-info__title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 144.444%;
+  }
 }
 .product-info__col-box {
   display: flex;
@@ -2728,6 +2775,11 @@ body {
 @media (max-width: 991.98px) {
   .product-info__col-box {
     flex-wrap: wrap;
+  }
+}
+@media (max-width: 767.98px) {
+  .product-info__col-box {
+    justify-content: center;
   }
 }
 .product-info__desc {
@@ -2821,9 +2873,19 @@ body {
 .product-info__icon {
   filter: var(--home-item-heart);
 }
+@media (max-width: 1399.98px) {
+  .product-info__img {
+    width: 100%;
+  }
+}
 @media (max-width: 1199.98px) {
   .product-info__img {
     width: 33rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .product-info__img {
+    margin-bottom: 1.6rem;
   }
 }
 .product-feedback {
@@ -2837,8 +2899,20 @@ body {
   line-height: 32px;
   color: #9e9da8;
 }
+@media (max-width: 767.98px) {
+  .product-feedback__items {
+    font-size: 14px;
+    line-height: 142.857%;
+  }
+}
 .product-feedback__items--chosen {
   color: var(--product-feedback-color);
+}
+.product-feedback__items-md {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 146.667%;
+  margin-bottom: 2rem;
 }
 .product-feedback__title {
   font-weight: 700;
@@ -2846,6 +2920,13 @@ body {
   line-height: 34px;
   color: var(--product-feedback-color);
   margin-bottom: 3rem;
+}
+@media (max-width: 767.98px) {
+  .product-feedback__title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 144.444%;
+  }
 }
 .product-feedback__card {
   display: flex;
@@ -2855,6 +2936,12 @@ body {
   border-radius: 16px;
   background: var(--product--feedback-card-bg);
 }
+@media (max-width: 767.98px) {
+  .product-feedback__card {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+}
 .product-feedback__personal {
   display: flex;
   gap: 2rem;
@@ -2863,6 +2950,11 @@ body {
   .product-feedback__personal {
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .product-feedback__personal {
+    justify-content: space-between;
   }
 }
 .product-feedback__img {
@@ -2886,6 +2978,11 @@ body {
   align-items: center;
   gap: 2rem;
 }
+@media (max-width: 767.98px) {
+  .product-feedback__review {
+    justify-content: space-between;
+  }
+}
 .product-feedback__rating {
   font-weight: 500;
   font-size: 18px;
@@ -2894,6 +2991,11 @@ body {
 @media (max-width: 1199.98px) {
   .product-feedback__box-name {
     text-align: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .product-feedback__box-name {
+    text-align: left;
   }
 }
 

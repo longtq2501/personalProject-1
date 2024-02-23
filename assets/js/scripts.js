@@ -194,7 +194,7 @@ window.onload = function () {
   });
 };
 
-// window.onload = function () {
+// window.onload = function () { 
 //   const formEmailBox = document.querySelector(".auth__form--input");
 //   const formEmailValue = document.getElementById("form-email").value;
 

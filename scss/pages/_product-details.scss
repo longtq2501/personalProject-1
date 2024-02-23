@@ -2,6 +2,10 @@
 
 body {
   background: var(--top-act-group-bg-color);
+
+  @include abstracts.screen(lg) {
+    background: var(--product--bg);
+  }
 }
 
 .product {
@@ -23,6 +27,12 @@ body {
         padding: 3rem;
         width: min(500px, 50%);
       }
+
+      @include abstracts.screen(md) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     &__title {
@@ -31,6 +41,12 @@ body {
       line-height: 36px;
       max-width: 639px;
       margin-bottom: 3rem;
+
+      @include abstracts.screen(md) {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 144.444%;
+      }
     }
 
     &__col-box {
@@ -43,6 +59,10 @@ body {
 
       @include abstracts.screen(lg) {
         flex-wrap: wrap;
+      }
+
+      @include abstracts.screen(md) {
+        justify-content: center;
       }
     }
 
@@ -154,8 +174,16 @@ body {
     }
 
     &__img {
+      @include abstracts.screen(xxl) {
+        width: 100%;
+      }
+
       @include abstracts.screen(xl) {
         width: 33rem;
+      }
+
+      @include abstracts.screen(md) {
+        margin-bottom: 1.6rem;
       }
     }
   }
@@ -171,8 +199,21 @@ body {
       line-height: 32px;
       color: #9e9da8;
 
+      @include abstracts.screen(md) {
+        font-size: 14px;
+        line-height: 142.857%;
+      }
+
       &--chosen {
         color: var(--product-feedback-color);
+      }
+
+      &-md {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 146.667%;
+
+        margin-bottom: 2rem;
       }
     }
 
@@ -182,6 +223,12 @@ body {
       line-height: 34px;
       color: var(--product-feedback-color);
       margin-bottom: 3rem;
+
+      @include abstracts.screen(md) {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 144.444%;
+      }
     }
 
     &__card {
@@ -192,6 +239,11 @@ body {
       padding: 3rem;
       border-radius: 16px;
       background: var(--product--feedback-card-bg);
+
+      @include abstracts.screen(md) {
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
     }
 
     &__personal {
@@ -201,6 +253,10 @@ body {
       @include abstracts.screen(xl) {
         flex-wrap: wrap;
         justify-content: center;
+      }
+
+      @include abstracts.screen(md) {
+        justify-content: space-between;
       }
     }
 
@@ -227,6 +283,10 @@ body {
       display: flex;
       align-items: center;
       gap: 2rem;
+
+      @include abstracts.screen(md) {
+        justify-content: space-between;
+      }
     }
 
     &__rating {
@@ -238,6 +298,10 @@ body {
     &__box-name {
       @include abstracts.screen(xl) {
         text-align: center;
+      }
+
+      @include abstracts.screen(md) {
+        text-align: left;
       }
     }
   }

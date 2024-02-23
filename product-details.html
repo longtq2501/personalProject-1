@@ -42,34 +42,54 @@
     <main class="product">
       <div class="container">
         <div class="product-container">
+          <!-- input search in tablet/mobile screen -->
+          <div class="product-container">
+            <div class="search d-none d-lg-flex">
+              <input
+                type="text"
+                name="search__input"
+                id="search__input"
+                class="search__input"
+                placeholder="Search for item"
+              />
+              <img src="./assets/icons/product-search.svg" class="search__icon--search" />
+            </div>
+          </div>
           <!-- Breadcrumbs -->
-          <ul class="breadcrumbs">
-            <li class="breadcrumbs__item">
-              <a href="#!" class="breadcrumbs__link"> Departments </a>
-              <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__icon" />
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="#!" class="breadcrumbs__link"> Coffee </a>
-              <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__icon" />
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="#!" class="breadcrumbs__link"> Coffee Beans </a>
-              <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__icon" />
-            </li>
-            <li class="breadcrumbs__item">
-              <a href="#!" class="breadcrumbs__link breadcrumbs__link--located"> LavAzza </a>
-            </li>
-          </ul>
+          <div class="product-container">
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item">
+                <a href="#!" class="breadcrumbs__link"> Departments </a>
+                <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__icon" />
+              </li>
+              <li class="breadcrumbs__item">
+                <a href="#!" class="breadcrumbs__link"> Coffee </a>
+                <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__icon" />
+              </li>
+              <li class="breadcrumbs__item">
+                <a href="#!" class="breadcrumbs__link"> Coffee Beans </a>
+                <img src="./assets/icons/arrow-right.svg" alt="" class="breadcrumbs__icon" />
+              </li>
+              <li class="breadcrumbs__item">
+                <a href="#!" class="breadcrumbs__link breadcrumbs__link--located"> LavAzza </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <!-- Product Information -->
         <div class="product-container">
           <article class="product-info">
             <picture>
-              <source media="(max-width:767.98px)" srcset="./assets/img/product-details/item-1.png">
-              <img src="./assets/img/browser-product/item-1.png" class="product-info__img" />
+              <source media="(max-width:767.98px)" srcset="./assets/img/product-details/item-1.png" />
+              <img src="./assets/img/browser-product/item-1.png" class="product-info__img d-md-none" />
             </picture>
             <article class="product-info__text">
+              <!-- image of product in tablet/mobile screens -->
+              <picture>
+                <source media="(max-width:767.98px)" srcset="./assets/img/product-details/item-1.png" />
+                <img src="./assets/img/browser-product/item-1.png" class="product-info__img d-none d-md-block" />
+              </picture>
               <h1 class="product-info__title">Coffee Beans - Espresso Arabica and Robusta Beans</h1>
               <div class="product-info__col-box">
                 <!-- col 1 -->
@@ -150,11 +170,12 @@
 
         <!-- Product feedback options -->
         <div class="product-container">
+          <p class="product-feedback__items-md d-none d-md-block">Similar items you might like</p>
           <ul class="product-feedback">
             <li class="product-feedback__items">Description</li>
             <li class="product-feedback__items">Features</li>
             <li class="product-feedback__items product-feedback__items--chosen">Review (1100)</li>
-            <li class="product-feedback__items">Similar</li>
+            <li class="product-feedback__items d-md-none">Similar</li>
           </ul>
         </div>
 
@@ -175,7 +196,7 @@
 
                 <div class="product-feedback__review">
                   <img src="./assets/icons/five-stars.svg" class="product-feedback__stars" />
-                  <span class="product-feedback__rating">(3.5) Review</span>
+                  <span class="product-feedback__rating d-lg-none d-md-block">(3.5) Review</span>
                 </div>
               </div>
             </div>
@@ -193,7 +214,7 @@
 
                 <div class="product-feedback__review">
                   <img src="./assets/icons/five-stars.svg" class="product-feedback__stars" />
-                  <span class="product-feedback__rating">(3.5) Review</span>
+                  <span class="product-feedback__rating d-lg-none d-md-block">(3.5) Review</span>
                 </div>
               </div>
             </div>
@@ -211,7 +232,7 @@
 
                 <div class="product-feedback__review">
                   <img src="./assets/icons/five-stars.svg" class="product-feedback__stars" />
-                  <span class="product-feedback__rating">(3.5) Review</span>
+                  <span class="product-feedback__rating d-lg-none d-md-block">(3.5) Review</span>
                 </div>
               </div>
             </div>

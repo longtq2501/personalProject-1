@@ -1,0 +1,26 @@
+@use "../abstracts";
+
+.search {
+  position: relative;
+  width: 100%;
+
+  &__input {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 142.857%;
+
+    padding: 2rem 2rem;
+    border-radius: 1rem;
+    background: var(--header-bg-color);
+  }
+
+  &__icon--search {
+    cursor: pointer;
+    position: absolute;
+    right: 18px;
+    bottom: 50%;
+    transform: translateY(50%);
+    filter: var(--product-search-icon);
+  }
+}
