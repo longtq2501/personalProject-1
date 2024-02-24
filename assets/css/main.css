@@ -2248,6 +2248,7 @@ html {
 }
 
 .filter {
+  display: none;
   position: absolute;
   right: 0;
   top: 50px;
