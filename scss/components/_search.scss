@@ -13,6 +13,10 @@
     padding: 2rem 2rem;
     border-radius: 1rem;
     background: var(--header-bg-color);
+
+    @include abstracts.screen(sm) {
+      padding: 1.3rem 1.5rem;
+    }
   }
 
   &__icon--search {

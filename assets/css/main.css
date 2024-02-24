@@ -2497,6 +2497,11 @@ html {
   border-radius: 1rem;
   background: var(--header-bg-color);
 }
+@media (max-width: 575.98px) {
+  .search__input {
+    padding: 1.3rem 1.5rem;
+  }
+}
 .search__icon--search {
   cursor: pointer;
   position: absolute;
@@ -2726,10 +2731,16 @@ body {
 
 .product-container {
   margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 .product-info {
   display: flex;
   gap: 1rem;
+}
+@media (max-width: 767.98px) {
+  .product-info__col-1, .product-info__col-2 {
+    width: 100%;
+  }
 }
 .product-info__text {
   flex: 1;
@@ -2747,6 +2758,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+@media (max-width: 575.98px) {
+  .product-info__text {
+    padding: 2rem;
   }
 }
 .product-info__title {
@@ -2824,6 +2840,12 @@ body {
     width: 244px;
   }
 }
+@media (max-width: 575.98px) {
+  .product-info__card {
+    padding: 1.5rem;
+    width: min(100%, 34rem);
+  }
+}
 .product-info__submoney {
   font-weight: 500;
   font-size: 16px;
@@ -2854,6 +2876,12 @@ body {
   border-radius: 6px;
   padding: 10px 55px;
   flex: 1;
+  white-space: nowrap;
+}
+@media (max-width: 575.98px) {
+  .product-info__btn {
+    height: 4.6rem;
+  }
 }
 .product-info__btn-box {
   display: flex;
@@ -2892,6 +2920,11 @@ body {
   display: flex;
   align-items: center;
   gap: 6rem;
+}
+@media (max-width: 575.98px) {
+  .product-feedback {
+    gap: 2rem;
+  }
 }
 .product-feedback__items {
   font-weight: 500;
@@ -2957,6 +2990,11 @@ body {
     justify-content: space-between;
   }
 }
+@media (max-width: 575.98px) {
+  .product-feedback__personal {
+    flex-wrap: nowrap;
+  }
+}
 .product-feedback__img {
   width: 8rem;
   height: 8rem;
@@ -3001,11 +3039,17 @@ body {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 2rem;
   gap: 1rem;
   border-radius: 10px;
   background: var(--header-bg-color);
+}
+@media (max-width: 575.98px) {
+  .breadcrumbs {
+    gap: 1rem 2.5rem;
+  }
 }
 .breadcrumbs__item {
   display: flex;
@@ -3017,6 +3061,13 @@ body {
   font-size: 16px;
   line-height: 24px;
   color: #9e9da8;
+}
+@media (max-width: 767.98px) {
+  .breadcrumbs__link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 142.857%;
+  }
 }
 .breadcrumbs__link--located {
   color: var(--breadcrumbs-color);

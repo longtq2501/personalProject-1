@@ -11,11 +11,18 @@ body {
 .product {
   &-container {
     margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 
   &-info {
     display: flex;
     gap: 1rem;
+
+    &__col-1, &__col-2 {
+      @include abstracts.screen(md) {
+        width: 100%;
+      }
+    }
 
     &__text {
       flex: 1;
@@ -32,6 +39,10 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+      }
+
+      @include abstracts.screen(sm) {
+        padding: 2rem;
       }
     }
 
@@ -113,6 +124,11 @@ body {
       @include abstracts.screen(xl) {
         width: 244px;
       }
+
+      @include abstracts.screen(sm) {
+        padding: 1.5rem;
+        width: min(100%, 34rem);
+      }
     }
 
     &__submoney {
@@ -149,6 +165,11 @@ body {
       border-radius: 6px;
       padding: 10px 55px;
       flex: 1;
+      white-space: nowrap;
+
+      @include abstracts.screen(sm) {
+        height: 4.6rem;
+      }
     }
 
     &__btn-box {
@@ -192,6 +213,10 @@ body {
     display: flex;
     align-items: center;
     gap: 6rem;
+
+    @include abstracts.screen(sm) {
+      gap: 2rem;
+    }
 
     &__items {
       font-weight: 500;
@@ -258,6 +283,10 @@ body {
       @include abstracts.screen(md) {
         justify-content: space-between;
       }
+
+      @include abstracts.screen(sm) {
+        flex-wrap: nowrap;
+      }
     }
 
     &__img {
@@ -309,11 +338,16 @@ body {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 2rem;
   gap: 1rem;
   border-radius: 10px;
   background: var(--header-bg-color);
+
+  @include abstracts.screen(sm) {
+    gap: 1rem 2.5rem;
+  }
 
   &__item {
     display: flex;
@@ -326,6 +360,12 @@ body {
     font-size: 16px;
     line-height: 24px;
     color: #9e9da8;
+
+    @include abstracts.screen(md) {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 142.857%;
+    }
 
     &--located {
       color: var(--breadcrumbs-color);
