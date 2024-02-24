@@ -203,6 +203,7 @@
 
   &__btn {
     @extend %flexItemsCenter;
+    position: relative;
     gap: 10px;
     padding: 13px 20px;
     cursor: pointer;
