@@ -1,24 +1,30 @@
 @use "../abstracts";
 
 body {
-  background: var(--top-act-group-bg-color);
-
   @include abstracts.screen(lg) {
     background: var(--product--bg);
   }
 }
 
 .product {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: var(--top-act-group-bg-color);
+
+  @include abstracts.screen(lg) {
+    background: var(--product--bg);
+  }
+
   &-container {
     margin-top: 3rem;
-    margin-bottom: 3rem;
   }
 
   &-info {
     display: flex;
     gap: 1rem;
 
-    &__col-1, &__col-2 {
+    &__col-1,
+    &__col-2 {
       @include abstracts.screen(md) {
         width: 100%;
       }
@@ -264,6 +270,11 @@ body {
       padding: 3rem;
       border-radius: 16px;
       background: var(--product--feedback-card-bg);
+
+      @include abstracts.screen(lg) {
+        height: 100%;
+        justify-content: space-between;
+      }
 
       @include abstracts.screen(md) {
         padding: 2rem;
